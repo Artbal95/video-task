@@ -1,0 +1,24 @@
+{
+  "author": "Arthur Balayan",
+  "bugs": {
+    "url": "https://github.com/Artbal95/video-task/issues"
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  },
+  "description": "Create Video Project",
+  "homepage": "https://github.com/Artbal95/video-task#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "video-task",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artbal95/video-task.git"
+  },
+  "scripts": {
+    "dev": "concurrently \"cd client && yarn start\" \"cd server && yarn run dev\"",
+    "install": "concurrently \"cd client && yarn\" \"cd server && yarn\"",
+    "start": "concurrently \"cd client && yarn start\" \"cd server && yarn start\""
+  },
+  "version": "1.0.0"
+}

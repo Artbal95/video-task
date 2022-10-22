@@ -1,0 +1,13 @@
+{
+   "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+         "@axios": ["config/axios.config.ts"],
+         "@hooks": ["hooks/"],
+         "@layouts": ["components/layouts/"],
+         "@pages": ["pages/"],
+         "@shared": ["components/shared/"],
+         "@types": ["types/"]
+      }
+   }
+}

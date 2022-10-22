@@ -1,0 +1,121 @@
+{
+   "env": {
+      "browser": true,
+      "es2021": true
+   },
+   "extends": [
+      "plugin:react/recommended",
+      "standard-with-typescript",
+      "plugin:react/jsx-runtime",
+      "prettier"
+   ],
+   "overrides": [],
+   "parserOptions": {
+      "ecmaFeatures": {
+         "jsx": true
+      },
+      "project": "./tsconfig.json",
+      "sourceType": "module"
+   },
+   "plugins": ["react"],
+   "settings": {
+      "react": {
+         "createClass": "createReactClass",
+         "pragma": "React",
+         "fragment": "Fragment",
+         "version": "detect",
+         "flowVersion": "0.53"
+      },
+      "propWrapperFunctions": [
+         "forbidExtraProps",
+         { "property": "freeze", "object": "Object" },
+         { "property": "myFavoriteWrapper" },
+         { "property": "forbidExtraProps", "exact": true }
+      ],
+      "componentWrapperFunctions": [
+         "observer",
+         { "property": "styled" },
+         { "property": "observer", "object": "Mobx" },
+         { "property": "observer", "object": "<pragma>" }
+      ],
+      "formComponents": [
+         "CustomForm",
+         { "name": "Form", "formAttribute": "endpoint" }
+      ],
+      "linkComponents": ["Hyperlink", { "name": "Link", "linkAttribute": "to" }]
+   },
+   "rules": {
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
+      "@typescript-eslint/triple-slash-reference": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "array-bracket-newline": [
+         "error",
+         {
+            "multiline": true
+         }
+      ],
+      "array-bracket-spacing": [
+         "error",
+         "always",
+         {
+            "arraysInArrays": false,
+            "objectsInArrays": false
+         }
+      ],
+      "arrow-body-style": ["error", "as-needed"],
+      "arrow-spacing": [
+         "error",
+         {
+            "after": true,
+            "before": true
+         }
+      ],
+      "block-spacing": ["error", "always"],
+      "camelcase": [
+         "error",
+         {
+            "ignoreDestructuring": true,
+            "properties": "always"
+         }
+      ],
+      "capitalized-comments": [
+         "error",
+         "always",
+         {
+            "ignoreConsecutiveComments": true,
+            "ignoreInlineComments": true,
+            "ignorePattern": "pragma|ignored"
+         }
+      ],
+      "comma-dangle": ["error", "always-multiline"],
+      "func-style": ["error", "expression"],
+      "jsx-quotes": ["error", "prefer-double"],
+      "key-spacing": [
+         "error",
+         {
+            "beforeColon": false
+         }
+      ],
+      "keyword-spacing": [
+         "error",
+         {
+            "before": true
+         }
+      ],
+      "no-var": "error",
+      "object-curly-newline": [
+         "error",
+         {
+            "multiline": true
+         }
+      ],
+      "object-curly-spacing": ["error", "always"],
+      "quotes": ["error", "double"],
+      "react/react-in-jsx-scope": "off",
+      "rest-spread-spacing": ["error", "never"],
+      "semi": ["error", "always"],
+      "space-before-blocks": ["error", "always"]
+   }
+}
